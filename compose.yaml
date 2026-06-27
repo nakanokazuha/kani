@@ -1,0 +1,9 @@
+services:
+  kani:
+    build: .
+    container_name: kani
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    restart: unless-stopped
