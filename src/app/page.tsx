@@ -1,10 +1,32 @@
+"use client";
+
+import { Shell, StatusCard } from "@/shared";
+
 export default function Home() {
   return (
-    <div className="flex flex-1 items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight">Kani</h1>
-        <p className="mt-2 text-muted-foreground">Operational cockpit</p>
+    <Shell>
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <StatusCard
+          title="System"
+          value="Healthy"
+          status="healthy"
+        />
+        <StatusCard
+          title="OpenClaw"
+          value="Offline"
+          status="down"
+        />
+        <StatusCard
+          title="Docker"
+          value="Not connected"
+          status="unknown"
+        />
+        <StatusCard
+          title="Network"
+          value="Online"
+          status="healthy"
+        />
       </div>
-    </div>
+    </Shell>
   );
 }
