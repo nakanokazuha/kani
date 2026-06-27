@@ -44,3 +44,6 @@ AGENTS.md
 PLAN.md
 MILESTONE.md
 VISION.md
+# pi agent files (project-local only)
+.pi/
+HANDOVER.md
